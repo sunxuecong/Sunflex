@@ -1,39 +1,89 @@
 # Sunflex
 
-Sunflex 是一款 Obsidian 主题，将 Sunflex 配色方案转换为 Obsidian 原生颜色变量，可直接作为独立主题使用。
+Sunflex is an Obsidian theme that adapts the Sunflex color scheme to Obsidian's native CSS variables, so it can be used as a standalone theme. It builds on top of the Minimal theme interface layer.
 
-## 截图
+> [中文说明](README.zh-CN.md)
 
-![Sunflex 主题截图](screenshot.png)
+## Screenshots
 
-## 主题特性
+![Sunflex theme screenshot](screenshot.png)
 
-- 基于 Sunflex 配色方案，提供舒适的阅读与写作体验
-- 支持亮色（Light）与暗色（Dark）两种模式
-- 内置 true-black 暗色变体（通过 `minimal-dark-black` 或 `black` 类启用）
-- 色彩调色板涵盖红、橙、黄、绿、青、蓝、紫、粉八种语义色
+## Features
 
-## 配色变量
+- Based on the Sunflex color scheme for comfortable reading and writing
+- Supports both Light and Dark modes
+- Includes a true-black dark variant (enabled with the `minimal-dark-black` or `black` class)
+- Full 8-color semantic palette: red, orange, yellow, green, cyan, blue, purple, pink
 
-主题在 `body` 中定义了以下基础变量：
+## Installation
 
-| 变量 | 说明 |
+### From the community themes browser (recommended)
+
+1. Open Obsidian → **Settings** → **Appearance**
+2. Click **Manage** next to "Themes"
+3. Search for **Sunflex** and click **Install**
+4. Go back to **Appearance** and select **Sunflex** from the theme dropdown
+
+### Manual installation
+
+1. Copy the entire `Sunflex` folder (containing `manifest.json`, `theme.css`, and `README.md`) into your vault's `.obsidian/themes/` directory
+2. Restart Obsidian
+3. Open **Settings** → **Appearance** → **Themes** and select **Sunflex**
+
+## Usage
+
+After installing, switch between Light and Dark from **Settings** → **Appearance** → **Base color scheme**. For deeper customization install the **Style Settings** plugin (see below).
+
+## Customization (Style Settings)
+
+This theme is fully compatible with the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, which exposes a granular UI for tweaking colors, fonts, and features without editing CSS.
+
+### Enabling Style Settings
+
+1. Install the **Style Settings** community plugin
+2. Enable it in **Settings** → **Community plugins**
+3. Open **Settings** → **Style Settings** → **Minimal** section
+
+### Available options
+
+The Style Settings panel for this theme includes the following groups:
+
+| Group | Description |
 | --- | --- |
-| `--base-h` | 基础色相 |
-| `--base-s` | 基础饱和度 |
-| `--base-l` | 基础亮度（100 为纯白） |
-| `--accent-h` | 强调色色相 |
-| `--accent-s` | 强调色饱和度 |
-| `--accent-l` | 强调色亮度 |
+| **Interface colors** | Base hue/saturation/lightness, plus primary, secondary, and active backgrounds (`bg1`, `bg2`, `bg3`), and border colors (`ui1`, `ui2`, `ui3`) |
+| **Accent color** | Primary (`ax1`), hover (`ax2`), interactive (`ax3`) accent colors, and text-on-accent (`sp1`) |
+| **Extended colors** | Eight semantic colors (red, orange, yellow, green, cyan, blue, purple, pink) used for progress bars, syntax highlighting, colorful headings, and graph nodes |
+| **Components** | Toggles for blockquotes, callouts (outlined), checkboxes (square shape, strikethrough), code scrolling, embeds (strict/underline/hide title), and tables |
+| **Typography** | Heading size/weight/variant, body font, and various UI font sizes |
+| **Layout** | Readable line width, max width, and focus mode |
+| **Color schemes** | Preset schemes — Gruvbox, macOS, Nord, Notion, Rosé Pine, Sky, Solarized, Things, and true-black — selectable for light and dark |
 
-亮色与暗色模式分别在 `.theme-light` 与 `.theme-dark` 中覆盖上述变量，并提供完整的 `--color-base-*` 与 `--color-*` 语义色阶。
+Each setting exposes separate light and dark values so your two modes stay independent. Colors can be pasted as hex (`#rrggbb`) or HSL tuples.
 
-## 安装方式
+## Color variables
 
-1. 将整个 `Sunflex` 文件夹放入 Obsidian 仓库的 `.obsidian/themes/` 目录下
-2. 打开 Obsidian 设置 → 外观 → 主题，选择 **Sunflex**
+The theme defines the following base variables on `body`:
 
-## 许可证
+| Variable | Description |
+| --- | --- |
+| `--base-h` | Base hue |
+| `--base-s` | Base saturation |
+| `--base-l` | Base lightness (100 = white) |
+| `--accent-h` | Accent hue |
+| `--accent-s` | Accent saturation |
+| `--accent-l` | Accent lightness |
+
+Light and Dark modes override these variables in `.theme-light` and `.theme-dark`, and provide a complete `--color-base-*` and `--color-*` semantic color scale.
+
+## Recommended plugins
+
+For the best experience, the following community plugins are supported:
+
+- **Minimal Theme Settings** — hotkeys, fonts, and color scheme presets
+- **Style Settings** — granular color and layout customization
+- **Hider** — hide UI elements for a distraction-free view
+
+## License
 
 MIT License
 
